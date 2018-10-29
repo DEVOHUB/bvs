@@ -14,6 +14,7 @@ An Image classifier to identify whether the given image is Batman or Superman us
 * Tensorflow 1.5.0
 * CUDA 9.0
 * CUDANN 7.0.5
+CUDA ==> Compute unified device architecture
 
 Indepth explanation of each section:  
 [Medium post with detailed step by step explanation](https://medium.com/@ipaar3/how-i-built-a-convolutional-image-classifier-using-tensorflow-from-scratch-f852c34e1c95) for deeper understanding of CNNs and architecture of the network.
@@ -22,7 +23,6 @@ Indepth explanation of each section:
 
 ### Collect data:
 * [Google Images Downloader](https://github.com/hardikvasa/google-images-download).It's fast, easy, simple and efficient.
-* I've collected 300 images each for Supes and Batsy respectively, But more data is highly preferable. Try to collect as much clean data as possible.  
 <p align="center">
 <img src="https://github.com/perseus784/BvS/blob/master/media/image_collection.png" width="800" height="400">
 </p>  
@@ -44,7 +44,7 @@ Indepth explanation of each section:
 * Run [this](https://github.com/perseus784/BvS/blob/master/preprocessing.py) file in the same directory as rawdata.
 * This will resize all the images to a standard resolution and same format and put it in a new folder named data.  
 **Note:** As I embedded it in *trainer.py*, it is unnecessary to run it explicitly.  
-**Update** :You can get the **data** folder itself from [here(50mb)](https://drive.google.com/open?id=1GUPBBdLlqStnxjhISkxT1qOf1XPnmRcF). Just download and extract!.
+
 
 <p align="left">
 <img src="https://github.com/perseus784/BvS/blob/master/media/convert.png" width="400" height="200">
@@ -101,8 +101,6 @@ With dimentional informations:
   
        rawdata/batman: 3810 images
        rawdata/superman: 3810 images
-
-**Update** :You can get the **data** folder itself from [here(50mb)](https://drive.google.com/open?id=1GUPBBdLlqStnxjhISkxT1qOf1XPnmRcF). Just download and extract!.  
 
 Our file structure should look like this,  
 <p align="left">
@@ -237,5 +235,3 @@ While this works for Binary classification, it will also work for Multiclass cla
 <img src="https://github.com/perseus784/BvS/blob/master/media/lego-batman-movie-tuxedo.jpg" alt="Batwin" width="800" height="400">
 </p>  
 
-Please Star the repo if you like it.  
-For any suggestions, doubts, clarifications please mail: ipaar3@gmail.com or raise an issue!.
